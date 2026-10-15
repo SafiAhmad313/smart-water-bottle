@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order AURA Pure — Smart Water Bottle</title>
+  <meta name="description" content="Configure and order your AURA Pure smart water bottle with UV-C purification, OLED telemetry, and vacuum insulation." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+</head>
+<body>
+
+  <!-- ================= Site Header ================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-box">
+          <img src="assets/logo.svg" alt="AURA Logo" width="28" height="28" />
+        </div>
+        <span>AURA <span class="brand-highlight">Pure</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="product.html" class="nav-item">Product Specs &amp; Info</a>
+        <a href="order.html" class="nav-item active">Order Now</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="order.html" class="cart-btn" aria-label="View Cart">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span class="cart-badge">1</span>
+        </a>
+        <a href="order.html" class="btn btn-secondary btn-sm">Pre-Order AURA</a>
+        <button class="mobile-toggle" aria-label="Toggle Navigation">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= Main Content ================= -->
+  <main>
+    <section class="section" style="padding: 2rem 0 4rem;">
+      <div class="container">
+
+        <!-- Breadcrumb & Stock Status -->
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem;">
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--color-on-surface-variant); text-transform: uppercase; letter-spacing: 0.06em;">
+            <a href="index.html">Home</a> /
+            <span>Hardware</span> /
+            <span style="color: var(--color-secondary);">AURA Pure Bottle</span>
+          </div>
+
+          <div class="badge badge-cyan">
+            <span class="live-dot"></span>
+            In stock &amp; ready to ship within 24 hours
+          </div>
+        </div>
+
+        <!-- Main Configurator Split Layout -->
+        <div class="order-layout">
+
+          <!-- LEFT: Interactive Visual Showcase Stage (Sticky) -->
+          <div class="order-visual-stage">
+            <!-- Top Feature Tags & Pulse Trigger -->
+            <div style="width: 100%; display: flex; justify-content: space-between; align-items: flex-start; z-index: 10;">
+              <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+                <span class="badge badge-glass">
+                  <span class="material-symbols-outlined" style="font-size: 15px; color: var(--color-secondary);">flare</span>
+                  275nm UV-C LED Integrated
+                </span>
+                <span class="badge badge-glass">
+                  <span class="material-symbols-outlined" style="font-size: 15px; color: var(--color-secondary);">thermostat</span>
+                  OLED Live Temp Ring
+                </span>
+              </div>
+
+              <!-- Test UV-C Pulse Button -->
+              <button id="uv-trigger-btn" class="btn btn-secondary btn-sm" style="box-shadow: 0 0 16px rgba(0, 104, 122, 0.35);">
+                <span class="material-symbols-outlined" style="font-size: 16px;">cycle</span>
+                Test UV-C Pulse
+              </button>
+            </div>
+
+            <!-- Central Product Presentation Image -->
+            <div class="order-image-frame">
+              <div id="uv-glow-effect" class="uv-pulse-halo"></div>
+              <img id="product-main-img" src="assets/aura-hero.png" alt="AURA Pure Smart Purifying Bottle" />
+
+              <!-- Live Laser Engraving Text Overlay -->
+              <div id="engraving-render-preview" class="engraving-output">
+                <span id="engraving-text-slot">YOUR NAME</span>
+              </div>
+            </div>
+
+            <!-- Colorway Tagline -->
+            <p id="selected-color-desc" style="font-size: 0.85rem; color: var(--color-on-surface-variant); text-align: center; margin-bottom: 1.25rem;">
+              Deep anodized matte black with surgical steel core
+            </p>
+
+            <!-- Gallery Thumbnails -->
+            <div class="thumbnail-row">
+              <button class="thumb-btn active" data-image-src="assets/aura-hero.png" title="Obsidian Studio">
+                <img src="assets/aura-hero.png" alt="Obsidian Matte Studio" />
+              </button>
+              <button class="thumb-btn" data-image-src="assets/aura-steel-desk.jpg" title="Modern Workspace">
+                <img src="assets/aura-steel-desk.jpg" alt="Brushed Stainless Workspace" />
+              </button>
+              <button class="thumb-btn" data-image-src="assets/aura-exploded-breakdown.jpg" title="Exploded Architecture">
+                <img src="assets/aura-exploded-breakdown.jpg" alt="Exploded Architecture" />
+              </button>
+              <button class="thumb-btn" data-image-src="assets/aura-colorways-lineup.jpg" title="Colorway Lineup">
+                <img src="assets/aura-colorways-lineup.jpg" alt="Colorway Lineup" />
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT: Order Configurator Steps -->
+          <div class="order-config-card">
+
+            <!-- Title & Rating Header -->
+            <div class="order-headline-box">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 700; color: #f59e0b;">
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span>4.9</span>
+                  <span style="color: var(--color-on-surface-variant); font-weight: 500;">(2,418 reviews)</span>
+                </div>
+                <span class="badge badge-cyan">LAUNCH SPECIAL</span>
+              </div>
+
+              <h1 style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.5rem;">
+                AURA Pure Smart Purifying Bottle
+              </h1>
+              <p style="font-size: 0.95rem; color: var(--color-on-surface-variant);">
+                Photocatalytic UV-C self-cleaning vessel with live biometric hydration feedback.
+              </p>
+
+              <!-- Dynamic Price -->
+              <div class="order-pricing-row">
+                <span id="order-current-price" class="current-price">$119</span>
+                <span class="original-price">$159</span>
+                <span class="badge badge-cyan">Save 25% Today</span>
+              </div>
+            </div>
+
+            <!-- Step 1: Colorway Selector -->
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;">1. Choose Colorway</span>
+                <span id="selected-color-name" style="font-size: 0.88rem; font-weight: 700; color: var(--color-secondary);">Obsidian Matte Black</span>
+              </div>
+
+              <div class="swatch-grid">
+                <!-- Swatch 1: Obsidian -->
+                <button type="button" class="swatch-item active" data-color-name="Obsidian Matte Black">
+                  <span class="swatch-circle" style="background: #0f172a;"></span>
+                  <span class="swatch-title">Obsidian</span>
+                </button>
+
+                <!-- Swatch 2: Glacial White -->
+                <button type="button" class="swatch-item" data-color-name="Glacial Alpine White">
+                  <span class="swatch-circle" style="background: #f8fafc; border: 1px solid #cbd5e1;"></span>
+                  <span class="swatch-title">Glacial</span>
+                </button>
+
+                <!-- Swatch 3: Oceanic Navy -->
+                <button type="button" class="swatch-item" data-color-name="Deep Oceanic Navy">
+                  <span class="swatch-circle" style="background: #004e5c;"></span>
+                  <span class="swatch-title">Oceanic</span>
+                </button>
+
+                <!-- Swatch 4: Titanium -->
+                <button type="button" class="swatch-item" data-color-name="Brushed Titanium">
+                  <span class="swatch-circle" style="background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);"></span>
+                  <span class="swatch-title">Titanium</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Capacity Selector -->
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;">2. Select Capacity</span>
+                <span style="font-size: 0.82rem; color: var(--color-on-surface-variant);">24h Cold / 14h Hot</span>
+              </div>
+
+              <div class="capacity-grid">
+                <!-- 500ml Option -->
+                <button type="button" class="capacity-card" data-size="500ml" data-price="99">
+                  <div class="capacity-top">
+                    <span class="capacity-size">500 ml <span style="font-size: 0.85rem; color: var(--color-on-surface-variant); font-weight: 400;">/ 17 oz</span></span>
+                    <span class="capacity-price">$99</span>
+                  </div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">
+                    Compact everyday carry. Fits standard car cup holders.
+                  </div>
+                </button>
+
+                <!-- 750ml Option (Default Active) -->
+                <button type="button" class="capacity-card active" data-size="750ml" data-price="119">
+                  <span class="capacity-badge">Most Popular</span>
+                  <div class="capacity-top">
+                    <span class="capacity-size">750 ml <span style="font-size: 0.85rem; color: var(--color-on-surface-variant); font-weight: 400;">/ 25 oz</span></span>
+                    <span class="capacity-price">$119</span>
+                  </div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">
+                    Optimal daily volume. Extended autonomy between refills.
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Laser Engraving Customization -->
+            <div class="engraving-box">
+              <div class="engraving-header">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;">3. Precision Laser Engraving</span>
+                  <span class="badge badge-cyan">+ $10</span>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="engraving-toggle" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div style="font-size: 0.82rem; color: var(--color-on-surface-variant);">
+                Subtle micro-milled laser engraving directly onto the steel exterior.
+              </div>
+              <div id="engraving-input-wrap" class="engraving-input-wrap" style="display: none;">
+                <input type="text" id="engraving-input-field" class="engraving-input" placeholder="Enter name or initials (max 12 chars)" maxlength="12" />
+              </div>
+            </div>
+
+            <!-- Step 4: Add-on Accessories -->
+            <div>
+              <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; display: block; margin-bottom: 0.75rem;">
+                4. Enhance Your Kit (Instant Bundle Discount)
+              </span>
+
+              <div class="addon-list">
+                <label class="addon-card">
+                  <div class="addon-info">
+                    <input type="checkbox" data-price="19" />
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.9rem;">Extra Magnetic Fast Cable</div>
+                      <div style="font-size: 0.78rem; color: var(--color-on-surface-variant);">1.5m braided nylon USB-C charging cord</div>
+                    </div>
+                  </div>
+                  <span style="font-weight: 700; font-size: 0.9rem; color: var(--color-secondary);">+$19</span>
+                </label>
+
+                <label class="addon-card">
+                  <div class="addon-info">
+                    <input type="checkbox" data-price="15" />
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.9rem;">Silicone Impact Protective Boot</div>
+                      <div style="font-size: 0.78rem; color: var(--color-on-surface-variant);">Prevents base dents &amp; ensures silent tabletop contact</div>
+                    </div>
+                  </div>
+                  <span style="font-weight: 700; font-size: 0.9rem; color: var(--color-secondary);">+$15</span>
+                </label>
+
+                <label class="addon-card">
+                  <div class="addon-info">
+                    <input type="checkbox" data-price="12" />
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.9rem;">Carrying Carabiner Loop Ring</div>
+                      <div style="font-size: 0.78rem; color: var(--color-on-surface-variant);">Anodized aluminum pack clip for trails &amp; gym</div>
+                    </div>
+                  </div>
+                  <span style="font-weight: 700; font-size: 0.9rem; color: var(--color-secondary);">+$12</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Checkout Action Section -->
+            <div class="checkout-bar">
+              <button type="button" id="checkout-action-btn" class="checkout-btn">
+                <span class="material-symbols-outlined" style="font-size: 20px;">lock</span>
+                <span>Checkout • <span id="checkout-total-amt">$119</span></span>
+              </button>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
+                <button type="button" class="btn btn-outline btn-sm" onclick="showToast('Connecting to Apple Pay...')">Apple Pay</button>
+                <button type="button" class="btn btn-outline btn-sm" onclick="showToast('Connecting to Google Pay...')">Google Pay</button>
+                <button type="button" class="btn btn-outline btn-sm" onclick="showToast('Connecting to Shop Pay...')">Shop Pay</button>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.8rem; color: var(--color-on-surface-variant); padding-top: 0.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-secondary);">autorenew</span>
+                  <span>30-Day Risk-Free Trial with Free Pre-Paid Returns</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-secondary);">verified</span>
+                  <span>2-Year Comprehensive Hardware Warranty Included</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-secondary);">local_shipping</span>
+                  <span>Free Carbon-Neutral Express Shipping</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Clinical Customer Feedback Strip -->
+        <div style="margin-top: 5rem;">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <span class="badge badge-cyan" style="margin-bottom: 0.5rem;">CLINICAL FEEDBACK</span>
+            <h2 style="font-family: var(--font-display); font-size: 2rem; font-weight: 700;">
+              Hydration Transformed
+            </h2>
+          </div>
+
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div>
+                <div class="star-rating">
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                </div>
+                <div class="review-quote">"Water tastes crystal crisp every sip."</div>
+                <p class="review-text">I work long shifts in the ICU. The automatic 2-hour UV-C clean cycle means zero bacteria build-up even in hospital air.</p>
+              </div>
+              <div class="reviewer-profile">
+                <div class="avatar-initial">JR</div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.95rem;">Julian Ross, MD</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">Verified Buyer • 750ml Obsidian</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div>
+                <div class="star-rating">
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                </div>
+                <div class="review-quote">"Flawless industrial aesthetic."</div>
+                <p class="review-text">As an architect, the seamless cylindrical body and subtle cyan luminescence are gorgeous. The laser engraving looks precision-milled.</p>
+              </div>
+              <div class="reviewer-profile">
+                <div class="avatar-initial">EV</div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.95rem;">Elena K. Voss</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">Verified Buyer • 500ml Alpine</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div>
+                <div class="star-rating">
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                  <span class="material-symbols-outlined" style="font-size: 18px;">star</span>
+                </div>
+                <div class="review-quote">"Survived two mountain expeditions."</div>
+                <p class="review-text">Sanitizes glacial runoff in 60 seconds with complete confidence. The battery lasted the entire 22 days without a top-up.</p>
+              </div>
+              <div class="reviewer-profile">
+                <div class="avatar-initial">MS</div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.95rem;">Marcus Sterling</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">Verified Buyer • 750ml Titanium</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cert-strip">
+        <div class="cert-item">
+          <span class="material-symbols-outlined cert-icon" style="font-size: 28px;">verified</span>
+          <div>
+            <div class="cert-title">NSF/ANSI 55 Certified</div>
+            <div class="cert-sub">Log-5 99.999% UV-C Pathogen Elimination</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="material-symbols-outlined cert-icon" style="font-size: 28px;">water</span>
+          <div>
+            <div class="cert-title">IPX7 Submersible</div>
+            <div class="cert-sub">Hermetically sealed magnetic contacts</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="material-symbols-outlined cert-icon" style="font-size: 28px;">health_and_safety</span>
+          <div>
+            <div class="cert-title">FDA Food-Grade 316 Steel</div>
+            <div class="cert-sub">BPA/BPS Free &amp; Zero Mineral Leaching</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-top-grid" style="padding-top: 3rem;">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-icon-box">
+              <img src="assets/logo.svg" alt="AURA Logo" width="24" height="24" />
+            </div>
+            <span>AURA <span class="brand-highlight">Pure</span></span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--color-on-surface-variant); max-width: 280px; line-height: 1.5;">
+            Medical-grade pure water hardware and biometric telemetry designed for human vitality.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Vessel</h4>
+          <ul class="footer-nav-list">
+            <li><a href="order.html">AURA 750ml Vessel</a></li>
+            <li><a href="order.html">AURA 500ml Compact</a></li>
+            <li><a href="order.html">PureCap UV-C Engine</a></li>
+            <li><a href="order.html">Fast-Charging Base</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Science</h4>
+          <ul class="footer-nav-list">
+            <li><a href="product.html">275nm Photonic Engine</a></li>
+            <li><a href="product.html">NSF/ANSI 55 Protocol</a></li>
+            <li><a href="product.html">Thermal Vacuum Physics</a></li>
+            <li><a href="product.html">Biometric Sync Algorithm</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Stay Hydrated</h4>
+          <p style="font-size: 0.85rem; color: var(--color-on-surface-variant); margin-bottom: 1rem;">
+            Receive technical teardowns, firmware updates, and clinical reports.
+          </p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your work email" class="engraving-input" style="height: 42px;" />
+            <button class="btn btn-primary btn-sm">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AURA Pure Health Hardware Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Hardware Warranty</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
