@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Specs &amp; Info — AURA Pure Smart Bottle</title>
+  <meta name="description" content="Technical specifications, pathogen reduction metrics, and subsystem architecture for AURA Pure." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+</head>
+<body>
+
+  <!-- ================= Site Header ================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-box">
+          <img src="assets/logo.svg" alt="AURA Logo" width="28" height="28" />
+        </div>
+        <span>AURA <span class="brand-highlight">Pure</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="product.html" class="nav-item active">Product Specs &amp; Info</a>
+        <a href="order.html" class="nav-item">Order Now</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="order.html" class="cart-btn" aria-label="View Cart">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span class="cart-badge">1</span>
+        </a>
+        <a href="order.html" class="btn btn-secondary btn-sm">Pre-Order AURA</a>
+        <button class="mobile-toggle" aria-label="Toggle Navigation">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= Main Content ================= -->
+  <main>
+
+    <!-- Context Breadcrumb & Title -->
+    <section class="section" style="padding: 2.5rem 0 1.5rem;">
+      <div class="container">
+        <div style="font-size: 0.82rem; font-weight: 700; color: var(--color-on-surface-variant); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem;">
+          <a href="index.html" style="color: var(--color-on-surface-variant);">Products</a> /
+          <span style="color: var(--color-on-surface-variant);">AURA Smart Vessel</span> /
+          <span style="color: var(--color-secondary);">Engineering &amp; Specifications</span>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
+          <div style="max-width: 760px;">
+            <span class="badge badge-cyan" style="margin-bottom: 0.75rem;">
+              <span class="live-dot"></span> REV 4.2 • NSF/ANSI 55 VERIFIED
+            </span>
+            <h1 style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 0.75rem;">
+              Precision Hardware Meets Predictive Hydration Software
+            </h1>
+            <p style="font-size: 1.1rem; color: var(--color-on-surface-variant);">
+              Deep-dive into medical-grade purification optics, thermal vacuum dynamics, and sub-milliliter telemetry.
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="order.html" class="btn btn-primary">
+              Pre-Order Vessel — $99
+            </a>
+            <button class="btn btn-outline" onclick="showToast('Engineering Specsheet PDF generated and downloading.')">
+              <span class="material-symbols-outlined" style="font-size: 18px;">download</span>
+              Specsheet PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Hardware Diagnostic Showcase -->
+    <section class="section" style="padding: 1rem 0 3.5rem;">
+      <div class="container">
+        <div class="card-solid" style="padding: 2.5rem; background: white;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;" class="hardware-split-wrap">
+            <!-- Product Render with Diagnostics Overlays -->
+            <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; background: var(--color-surface-low); min-height: 420px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm);">
+              <img src="assets/aura-hero.png" alt="AURA Pure Studio Render" style="max-height: 400px; width: auto; object-fit: contain;" />
+              <!-- HUD Overlays -->
+              <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); padding: 0.4rem 0.85rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 700; color: var(--color-primary); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 0.4rem;">
+                <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-secondary);">wb_twilight</span>
+                275nm Photonic Engine Active
+              </div>
+              <div style="position: absolute; bottom: 1rem; right: 1rem; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); padding: 0.4rem 0.85rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 700; color: var(--color-primary); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: 0.4rem;">
+                <span class="live-dot"></span>
+                BLE 5.3 • Polling 10Hz
+              </div>
+            </div>
+
+            <!-- Architectural Summary & 4-Tile Metrics -->
+            <div>
+              <span class="badge badge-cyan" style="margin-bottom: 0.5rem;">ARCHITECTURAL SUMMARY</span>
+              <h2 style="font-family: var(--font-display); font-size: 2rem; font-weight: 700; margin-bottom: 0.75rem;">
+                Surgical Purity. Military Tolerances.
+              </h2>
+              <p style="font-size: 0.95rem; color: var(--color-on-surface-variant); margin-bottom: 1.5rem; line-height: 1.6;">
+                Machined from 316 and 18/8 austenitic stainless steels. Structurally inert, impervious to mineral leeching, and hermetically sealed against 1.5 atm of thermal pressure.
+              </p>
+
+              <!-- 2x2 Metric Callout Grid -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div style="background: var(--color-surface-low); padding: 1.25rem; border-radius: var(--radius-md);">
+                  <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--color-secondary);">99.999%</div>
+                  <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">Bio-Deactivation</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">Log-5 pathogen reduction lab-verified.</div>
+                </div>
+
+                <div style="background: var(--color-surface-low); padding: 1.25rem; border-radius: var(--radius-md);">
+                  <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--color-primary);">±5 ml</div>
+                  <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">Precision Sensor</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">Capacitive liquid profiling filtering noise.</div>
+                </div>
+
+                <div style="background: var(--color-surface-low); padding: 1.25rem; border-radius: var(--radius-md);">
+                  <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--color-primary);">30 Days</div>
+                  <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">Battery Life</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">ARM Cortex-M4 sleep-cycle architecture.</div>
+                </div>
+
+                <div style="background: var(--color-surface-low); padding: 1.25rem; border-radius: var(--radius-md);">
+                  <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--color-secondary);">IPX7</div>
+                  <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">Hermetic Seal</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">Submersible to 1m for 30 minutes.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE SUBSYSTEM ARCHITECTURE TABS -->
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <span class="badge badge-cyan" style="margin-bottom: 0.5rem;">MODULAR DEEP-DIVE</span>
+          <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 700;">
+            Subsystem Architecture
+          </h2>
+          <p style="color: var(--color-on-surface-variant); font-size: 0.95rem;">
+            Explore the engineering modules powering sterilization, consumption telemetry, and thermal conservation.
+          </p>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="spec-tabs-nav">
+          <button class="spec-tab-btn active" data-tab="tab-uv">
+            <span class="material-symbols-outlined" style="font-size: 18px;">flare</span>
+            Photonic UV-C Sanitization
+          </button>
+          <button class="spec-tab-btn" data-tab="tab-sensors">
+            <span class="material-symbols-outlined" style="font-size: 18px;">sensors</span>
+            Hydration Biometrics Array
+          </button>
+          <button class="spec-tab-btn" data-tab="tab-thermal">
+            <span class="material-symbols-outlined" style="font-size: 18px;">device_thermostat</span>
+            Thermal &amp; Power Architecture
+          </button>
+        </div>
+
+        <!-- Tab 1: UV-C Sanitization -->
+        <div id="tab-uv" class="spec-tab-panel active">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div class="card-solid" style="padding: 2rem; background: white;">
+              <span class="badge badge-cyan" style="margin-bottom: 1rem;">275nm ± 3nm Wavelength</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">
+                Photocatalytic Destruction at the Cellular Core
+              </h3>
+              <p style="color: var(--color-on-surface-variant); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                Solid-state semiconductor AlGaN emitter generating focused 275nm radiation. At this frequency, photon absorption ruptures thymine DNA bonds within bacteria, viral coats, and fungal spore caps.
+              </p>
+
+              <div style="border-top: 1px solid var(--color-surface-container); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                  <span style="color: var(--color-on-surface-variant);">Active Cleansing Cycle Duration</span>
+                  <span style="font-weight: 700; color: var(--color-primary);">60 Seconds</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                  <span style="color: var(--color-on-surface-variant);">Autonomous Maintenance Cycle</span>
+                  <span style="font-weight: 700; color: var(--color-primary);">Every 120 Minutes</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                  <span style="color: var(--color-on-surface-variant);">Emitter Service Lifetime</span>
+                  <span style="font-weight: 700; color: var(--color-primary);">50,000+ Cycles (14+ Years)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pathogen Inactivation Table -->
+            <div class="card-solid" style="padding: 2rem; background: white;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h4 style="font-family: var(--font-display); font-weight: 700; font-size: 1.1rem;">
+                  Laboratory Pathogen Inactivation
+                </h4>
+                <span class="badge badge-glass">60s CYCLE</span>
+              </div>
+
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem;">
+                <thead>
+                  <tr style="border-bottom: 1.5px solid var(--color-surface-container); text-align: left;">
+                    <th style="padding: 0.6rem 0; color: var(--color-on-surface-variant); font-weight: 600;">Pathogen Strain</th>
+                    <th style="padding: 0.6rem 0; text-align: right; color: var(--color-secondary); font-weight: 700;">Reduction Ratio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--color-surface-container);">
+                    <td style="padding: 0.75rem 0; font-weight: 600;">Escherichia coli (ATCC 8739)</td>
+                    <td style="padding: 0.75rem 0; text-align: right; color: var(--color-secondary); font-weight: 700;">99.999% (-6.2 log)</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--color-surface-container);">
+                    <td style="padding: 0.75rem 0; font-weight: 600;">Salmonella enterica</td>
+                    <td style="padding: 0.75rem 0; text-align: right; color: var(--color-secondary); font-weight: 700;">99.998% (-4.9 log)</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--color-surface-container);">
+                    <td style="padding: 0.75rem 0; font-weight: 600;">Staphylococcus aureus</td>
+                    <td style="padding: 0.75rem 0; text-align: right; color: var(--color-secondary); font-weight: 700;">99.994% (-4.7 log)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.75rem 0; font-weight: 600;">Biofilm Mold (Aspergillus)</td>
+                    <td style="padding: 0.75rem 0; text-align: right; color: var(--color-secondary); font-weight: 700;">99.989% (-4.3 log)</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem;">
+                <a href="order.html" class="btn btn-primary btn-sm" style="width: 100%;">
+                  Order AURA Vessel with PureCap
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Hydration Biometrics Array -->
+        <div id="tab-sensors" class="spec-tab-panel">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+            <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+              <img src="assets/aura-steel-desk.jpg" alt="AURA Biometric Tracking on Desk" />
+            </div>
+            <div class="card-solid" style="padding: 2.25rem; background: white;">
+              <span class="badge badge-cyan" style="margin-bottom: 1rem;">MICRO-CAPACITIVE SENSING</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">
+                Continuous Water Intake Profiling
+              </h3>
+              <p style="color: var(--color-on-surface-variant); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                The AURA base integrates a 12-point capacitive field sensor that scans liquid volume to ±5 ml accuracy every time the bottle is placed flat. Dynamic algorithms filter out sloshing, walking motion, and ice cubes.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div style="background: var(--color-surface-low); padding: 1rem; border-radius: var(--radius-md);">
+                  <div style="font-weight: 700; font-size: 0.95rem;">Apple Health</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">Native two-way biometric sync.</div>
+                </div>
+                <div style="background: var(--color-surface-low); padding: 1rem; border-radius: var(--radius-md);">
+                  <div style="font-weight: 700; font-size: 0.95rem;">Strava &amp; WHOOP</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">Dynamic sweat compensation.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Thermal & Power Architecture -->
+        <div id="tab-thermal" class="spec-tab-panel">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+            <div class="card-solid" style="padding: 2.25rem; background: white;">
+              <span class="badge badge-cyan" style="margin-bottom: 1rem;">THERMAL EFFICIENCY</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">
+                Double-Wall Vacuum + Magnetic Pogo Dock
+              </h3>
+              <p style="color: var(--color-on-surface-variant); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                Dual walls of cold-worked 316 surgical steel are sealed with a vacuum pressure of 10⁻⁵ Torr with copper reflective heat shielding. Liquids stay iced for 24 hours and piping hot for 14 hours.
+              </p>
+              <div style="display: flex; gap: 1rem;">
+                <div style="background: var(--color-surface-low); padding: 1rem; border-radius: var(--radius-md); flex: 1;">
+                  <div style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary);">650 mAh</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">Li-ion Polymer Cell</div>
+                </div>
+                <div style="background: var(--color-surface-low); padding: 1rem; border-radius: var(--radius-md); flex: 1;">
+                  <div style="font-size: 1.25rem; font-weight: 800; color: var(--color-secondary);">90 Mins</div>
+                  <div style="font-size: 0.8rem; color: var(--color-on-surface-variant);">Magnetic Full Charge</div>
+                </div>
+              </div>
+            </div>
+            <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+              <img src="assets/aura-exploded-breakdown.jpg" alt="AURA Thermal Engineering Breakdown" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HARDWARE COMPARISON MATRIX TABLE -->
+    <section class="section" style="background: white; border-top: 1px solid var(--color-outline-variant);">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <span class="badge badge-cyan" style="margin-bottom: 0.5rem;">ENGINEERING MATRIX</span>
+          <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 700;">
+            Hardware Configuration Comparison
+          </h2>
+          <p style="color: var(--color-on-surface-variant); font-size: 0.95rem;">
+            Direct comparison between AURA Pro (750ml), AURA Slim (500ml), and standard metal bottles.
+          </p>
+        </div>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Specification</th>
+                <th class="highlight-col">AURA Pro (750ml) <span class="badge badge-cyan" style="margin-left: 0.35rem;">POPULAR</span></th>
+                <th>AURA Slim (500ml)</th>
+                <th>Standard Steel Bottle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Liquid Capacity</td>
+                <td class="highlight-col">750 ml / 25.4 oz</td>
+                <td>500 ml / 17.0 oz</td>
+                <td>500 - 750 ml</td>
+              </tr>
+              <tr>
+                <td>Purification Engine</td>
+                <td class="highlight-col">275nm Solid-State UV-C LED</td>
+                <td>275nm Solid-State UV-C LED</td>
+                <td>None (Requires Hand Scrub)</td>
+              </tr>
+              <tr>
+                <td>Pathogen Reduction</td>
+                <td class="highlight-col">99.999% in 60s</td>
+                <td>99.999% in 60s</td>
+                <td>0% (Biofilm Accumulates)</td>
+              </tr>
+              <tr>
+                <td>Intake Sensing Accuracy</td>
+                <td class="highlight-col">±5 ml Capacitive Array</td>
+                <td>±5 ml Capacitive Array</td>
+                <td>None (Manual Estimation)</td>
+              </tr>
+              <tr>
+                <td>Chassis Construction</td>
+                <td class="highlight-col">316 Surgical Grade Steel</td>
+                <td>316 Surgical Grade Steel</td>
+                <td>Generic 304 or Aluminum</td>
+              </tr>
+              <tr>
+                <td>Thermal Insulation</td>
+                <td class="highlight-col">24h Cold / 14h Hot</td>
+                <td>24h Cold / 12h Hot</td>
+                <td>12h Cold / 6h Hot</td>
+              </tr>
+              <tr>
+                <td>Battery &amp; Charging</td>
+                <td class="highlight-col">30 Days (Magnetic Dock)</td>
+                <td>30 Days (Magnetic Dock)</td>
+                <td>N/A (No Electronics)</td>
+              </tr>
+              <tr>
+                <td>Waterproof Rating</td>
+                <td class="highlight-col">IPX7 Submersible</td>
+                <td>IPX7 Submersible</td>
+                <td>Hand-Wash Only</td>
+              </tr>
+              <tr>
+                <td>Retail Pricing</td>
+                <td class="highlight-col" style="font-size: 1.1rem; font-weight: 800;">$119</td>
+                <td style="font-size: 1.1rem; font-weight: 800;">$99</td>
+                <td>$35 - $50</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="order.html" class="btn btn-primary btn-lg">
+            Configure Your AURA Bottle
+            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA BANNER -->
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-content">
+          <span class="badge badge-cyan" style="background: rgba(87, 223, 254, 0.25); color: #57dffe; margin-bottom: 1rem;">
+            BATCH 04 ALLOCATION OPEN
+          </span>
+          <h2>Ready to upgrade your daily hydration?</h2>
+          <p>Order your AURA Pure smart vessel with complimentary magnetic dock and 2-year warranty.</p>
+        </div>
+        <div>
+          <a href="order.html" class="btn btn-secondary btn-lg" style="white-space: nowrap;">
+            Configure &amp; Order — $99
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cert-strip">
+        <div class="cert-item">
+          <span class="material-symbols-outlined cert-icon" style="font-size: 28px;">verified</span>
+          <div>
+            <div class="cert-title">NSF/ANSI 55 Certified</div>
+            <div class="cert-sub">Log-5 99.999% UV-C Pathogen Elimination</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="material-symbols-outlined cert-icon" style="font-size: 28px;">water</span>
+          <div>
+            <div class="cert-title">IPX7 Submersible</div>
+            <div class="cert-sub">Hermetically sealed magnetic contacts</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="material-symbols-outlined cert-icon" style="font-size: 28px;">health_and_safety</span>
+          <div>
+            <div class="cert-title">FDA Food-Grade 316 Steel</div>
+            <div class="cert-sub">BPA/BPS Free &amp; Zero Mineral Leaching</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-top-grid" style="padding-top: 3rem;">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-icon-box">
+              <img src="assets/logo.svg" alt="AURA Logo" width="24" height="24" />
+            </div>
+            <span>AURA <span class="brand-highlight">Pure</span></span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--color-on-surface-variant); max-width: 280px; line-height: 1.5;">
+            Medical-grade pure water hardware and biometric telemetry designed for human vitality.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Vessel</h4>
+          <ul class="footer-nav-list">
+            <li><a href="order.html">AURA 750ml Vessel</a></li>
+            <li><a href="order.html">AURA 500ml Compact</a></li>
+            <li><a href="order.html">PureCap UV-C Engine</a></li>
+            <li><a href="order.html">Fast-Charging Base</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Science</h4>
+          <ul class="footer-nav-list">
+            <li><a href="product.html">275nm Photonic Engine</a></li>
+            <li><a href="product.html">NSF/ANSI 55 Protocol</a></li>
+            <li><a href="product.html">Thermal Vacuum Physics</a></li>
+            <li><a href="product.html">Biometric Sync Algorithm</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Stay Hydrated</h4>
+          <p style="font-size: 0.85rem; color: var(--color-on-surface-variant); margin-bottom: 1rem;">
+            Receive technical teardowns, firmware updates, and clinical reports.
+          </p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your work email" class="engraving-input" style="height: 42px;" />
+            <button class="btn btn-primary btn-sm">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AURA Pure Health Hardware Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Hardware Warranty</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
